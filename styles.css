@@ -176,12 +176,19 @@ h1, h2, h3, h4, h5 {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 50px 0 50px 0;
 }
 
 #bio p {
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 2px;
+}
+
+.quote-icon {
+    font-size: 50px; /* Adjust size */
+    color: #231f20; /* Adjust color */
+    margin-bottom: 30px; /* Add spacing */
 }
 
 #services {
@@ -223,7 +230,8 @@ h1, h2, h3, h4, h5 {
 }
 
 #contacts h2 {
-    padding-bottom: 30px;
+    font-size: 50px;
+    padding-bottom: 50px;
     font-weight: bold;
 }
 
