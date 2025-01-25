@@ -120,8 +120,7 @@ h1, h2, h3, h4, h5 {
     background-position: center;
     color: #231f20;
     text-align: center;
-    padding: 100px 20px;
-    /* height: 90vh; Full screen height */
+    /* padding: 100px 20px; */
 }
 
 .hero-section img {
@@ -142,6 +141,15 @@ h1, h2, h3, h4, h5 {
     font-size: 28px;
     margin-top: 15px;
     font-weight: 400;
+    border-right: 2px solid #333;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: blink 0.7s step-end infinite;
+}
+
+#typing {
+    font-weight: 600;
 }
 
 /* Styling for the social icons */
@@ -305,33 +313,19 @@ h1, h2, h3, h4, h5 {
 
 /* HERO SECTION */
 /* Typing animation */
-/* PC view adjustments (excludes mobile and tablet) */
-@media only screen and (min-width: 769px) {
-    /* Your PC-specific styles go here */
-    .hero-section p {
-        font-size: 28px;
-        margin-top: 15px;
-        font-weight: 400;
-        white-space: nowrap;
-        overflow: hidden;
-        display: inline-block;
+
+@keyframes typing {
+    0% {
         width: 0;
-        border-right: 3px solid black;
-        animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
     }
-    @keyframes typing {
-        0% {
-          width: 0;
-        }
-        100% {
-          width: 40ch; /* Adjust width based on the length of the text */
-        }
-      }
-      
-      /* Blinking cursor effect */
-      @keyframes blink {
-        50% {
-          border-color: transparent;
-        }
-      }
-  }
+    100% {
+        width: 40ch; /* Adjust width based on the length of the text */
+    }
+    }
+    
+    /* Blinking cursor effect */
+    @keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+    }
