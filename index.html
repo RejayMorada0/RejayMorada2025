@@ -14,6 +14,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
 </head>
 
 <body>
@@ -134,17 +135,50 @@
         <div class="container">
             <h2>Contact Me</h2>
             <p>Feel free to reach out to discuss your projects or inquiries.</p>
-            
-            <!-- Contact Form Row -->
-            <form class="contact-form" id="contactForm">
-                <input type="text" name="name" id="name" placeholder="Your Name" required>
-                <input type="email" name="email" id="email" placeholder="Your Email" required>
-                <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-            <p id="successMessage" style="display: none;">Thank you! Your message has been sent.</p>
+            <div class="contact-container">
+                <!-- Contact Information Row -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i> 
+                        <div class="label">
+                            <h3>Location:</h3>
+                            <p>Cavite, Philippines</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i> 
+                        <div class="label">
+                            <h3>Email:</h3>
+                            <p>rejay@email.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i> 
+                        <div class="label">
+                            <h3>Phone:</h3>
+                            <p>090909090909</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Row -->
+                <div class="contact-section">  
+                    
+                    <form class="contact-form" id="contactForm">
+                        <input type="text" id="name" name="name"  placeholder="Your Name" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                    <!-- Loading message -->
+                    <div id="loadingMessage" style="display: none;">Sending...</div>
+                    
+                    <!-- Success/Error message -->
+                    <div id="successMessage" style="display: none;"></div>
+                </div>
             </div>
+            
         </div>
     </section>
 
