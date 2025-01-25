@@ -121,10 +121,10 @@ h1, h2, h3, h4, h5 {
     color: #231f20;
     text-align: center;
     padding: 100px 20px;
-    height: 90vh; /* Full screen height */
+    /* height: 90vh; Full screen height */
 }
 
-.hero-section .container img {
+.hero-section img {
     width: 100%; /* Make the image take up the full width of its container */
     max-width: 220px; /* Optional: you can adjust this value to limit the image size */
     height: auto; /* Maintain the aspect ratio */
@@ -132,13 +132,13 @@ h1, h2, h3, h4, h5 {
     margin: 0 auto; /* Centers the image horizontally */
 }
 
-.hero-section .container h1 {
+.hero-section h1 {
     font-size: 60px;
     margin-top: 20px;
     font-weight: bold;
 }
 
-.hero-section .container p {
+.hero-section p {
     font-size: 28px;
     margin-top: 15px;
     font-weight: 400;
@@ -161,6 +161,62 @@ h1, h2, h3, h4, h5 {
 
 .social-icon:hover {
     color: #f39c12; /* Color change on hover */
+}
+
+#bio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#bio p {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+#services {
+    display: flex;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 50px;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+#tools {
+    display: flex;
+    text-align: center;
+}
+
+#tools h2 {
+    font-size: 50px;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+#portfolio {
+    display: flex;
+    text-align: center;
+}
+
+#portfolio h2 {
+    font-size: 50px;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+#contacts {
+    display: flex;
+    text-align: center;
+}
+
+#contacts h2 {
+    padding-bottom: 30px;
+    font-weight: bold;
 }
 
 /* Optional: Add a custom font awesome import if not already included */
@@ -186,6 +242,10 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     padding: 20px;
 }
+
+
+
+
 
 /* Mobile and Tablet view adjustments */
 @media only screen and (max-width: 768px) {
@@ -248,7 +308,7 @@ h1, h2, h3, h4, h5 {
 /* PC view adjustments (excludes mobile and tablet) */
 @media only screen and (min-width: 769px) {
     /* Your PC-specific styles go here */
-    .hero-section .container p {
+    .hero-section p {
         font-size: 28px;
         margin-top: 15px;
         font-weight: 400;
