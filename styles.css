@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .footer {
-    background-color: #2c3e50;
+    background-color: #231f20;
     color: #ecf0f1;
     text-align: center;
     padding: 20px;
@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5 {
     background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('rejay-img.jpeg');
     background-size: cover;
     background-position: center;
-    color: #2c3e50;
+    color: #231f20;
     text-align: center;
     padding: 100px 20px;
     height: 90vh; /* Full screen height */
@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5 {
 
 .social-icon {
     font-size: 30px; /* Size of icons */
-    color: #2c3e50; /* Default color */
+    color: #231f20; /* Default color */
     text-decoration: none; /* Remove underline */
     transition: color 0.3s ease; /* Smooth color transition */
 }
@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .footer {
-    background-color: #2c3e50;
+    background-color: #231f20;
     color: #ecf0f1;
     text-align: center;
     padding: 20px;
@@ -245,3 +245,33 @@ h1, h2, h3, h4, h5 {
 
 /* HERO SECTION */
 /* Typing animation */
+/* PC view adjustments (excludes mobile and tablet) */
+@media only screen and (min-width: 769px) {
+    /* Your PC-specific styles go here */
+    .hero-section .container p {
+        font-size: 28px;
+        margin-top: 15px;
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        width: 0;
+        border-right: 3px solid black;
+        animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+    }
+    @keyframes typing {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 40ch; /* Adjust width based on the length of the text */
+        }
+      }
+      
+      /* Blinking cursor effect */
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+  }
