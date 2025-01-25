@@ -231,8 +231,46 @@ h1, h2, h3, h4, h5 {
 
 #contacts h2 {
     font-size: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     font-weight: bold;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.contact-form input, .contact-form textarea, .contact-form button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.contact-form button {
+    background-color: #231f20;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+.contact-form button:hover {
+    background-color: #f39c12;
+}
+
+
+#successMessage {
+    text-align: center;
+    color: green;
+    margin-top: 10px;
+    font-size: 16px;
 }
 
 /* Optional: Add a custom font awesome import if not already included */
