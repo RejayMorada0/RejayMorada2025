@@ -213,6 +213,16 @@ h1, h2, h3, h4, h5 {
     font-weight: bold;
 }
 
+
+/* PORTFOLIO */
+
+/* Portfolio Section Styling */
+#portfolio {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
 #portfolio {
     display: flex;
     text-align: center;
@@ -222,6 +232,109 @@ h1, h2, h3, h4, h5 {
     font-size: 50px;
     font-weight: bold;
 }
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex; /* Makes the container a flexbox */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    overflow: hidden; /* Prevents image overflow */
+    height: 250px; /* Matches the image height */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px; /* Set a constant height */
+    object-fit: cover; /* Ensures the image scales proportionally without distortion */
+    object-position: top; /* Aligns the image to the top */
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.portfolio-overlay p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.portfolio-overlay .btn {
+    padding: 10px 20px;
+    background-color: #231f20;
+    color: white;
+    border: solid 1px white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-overlay .btn:hover {
+    background-color: #f39c12;
+}
+
+/* Styling for the See More Button */
+.see-more-container {
+    text-align: center; /* Centers the button */
+    margin-top: 20px; /* Adds space above the button */
+}
+
+.see-more-btn {
+    padding: 10px 20px;
+    background-color: #231f20;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+    background-color: #f39c12;
+    color: #fff;
+    transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+
+
+
+/* CONTACTS */
 
 #contacts {
     display: flex;
