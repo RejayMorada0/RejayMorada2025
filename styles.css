@@ -215,6 +215,58 @@ h1, h2, h3, h4, h5 {
 }
 
 
+/* Styling for tool cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Modal styling */
+  .modal-dialog.modal-lg {
+    max-width: 90%;
+  }
+  
+  .tool-logo {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .tool-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  .tool-logo p {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  #tools .col-md-4{
+    border: solid 1px red;
+    padding: 20px;
+  }
+
+  #tools .card{
+    gap: 20px;
+    padding: 20px;
+  }
+
+  
+
 
 /* PORTFOLIO */
 
