@@ -143,14 +143,14 @@
                         <i class="fas fa-map-marker-alt"></i> 
                         <div class="label">
                             <h3>Location:</h3>
-                            <p>Cavite, Philippines</p>
+                            <p>Philippines</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i> 
                         <div class="label">
                             <h3>Email:</h3>
-                            <p>rejay@email.com</p>
+                            <p>rejaymorada@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -164,7 +164,6 @@
 
                 <!-- Contact Form Row -->
                 <div class="contact-section">  
-                    
                     <form class="contact-form" action="https://formspree.io/f/xqaeavap" method="POST">
                         <input type="text" id="name" name="name"  placeholder="Your Name" required>
                         <input type="email" id="email" name="email" placeholder="Your Email" required>
@@ -212,6 +211,7 @@
             });
         });
 
+        
         // Smooth scrolling and centering section on click
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function (e) {
@@ -219,15 +219,18 @@
                 const targetId = this.getAttribute('href').substring(1); // Remove the `#`
                 const targetSection = document.getElementById(targetId);
 
-                // Calculate the offset to center the section (adjust for navbar height if needed)
-                const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
-                const offsetPosition = targetSection.offsetTop - (window.innerHeight / 2 - targetSection.offsetHeight / 2);
+                if (targetSection) {
+                    // Calculate the offset to center the section (adjust for navbar height if needed)
+                    const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 0;
+                    const customOffset = -100; // Adjust this value as needed
+                    const offsetPosition = targetSection.offsetTop - (window.innerHeight / 2 - targetSection.offsetHeight / 2) + customOffset;
 
-                // Smoothly scroll to the target position
-                window.scrollTo({
-                    top: offsetPosition + navbarHeight,
-                    behavior: 'smooth'
-                });
+                    // Smoothly scroll to the target position
+                    window.scrollTo({
+                        top: offsetPosition + navbarHeight,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
 
