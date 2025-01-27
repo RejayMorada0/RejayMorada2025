@@ -315,47 +315,83 @@
 
 
     <!-- Portfolio Section -->
+    <!-- Portfolio Section -->
     <section id="portfolio" class="section bg-light">
         <div class="container">
             <h2>Portfolio</h2>
             <p>View my previous work and projects.</p>
-            <div class="row" id="portfolio-container">
-                <!-- Project 1 -->
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="VokdaVirtual.png" alt="Project 1" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <h3>VokdaVirtual</h3>
-                            <p>I developed this website for a VA company.</p>
-                            <a href="https://www.vodkavirtuals.com/" class="btn btn-primary" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="SelCam.png" alt="Project 2" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <h3>SelCam</h3>
-                            <p>Take photos with your camera and save it to your album.</p>
-                            <a href="https://rejay45portfolio.vercel.app/" class="btn btn-primary" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="col-md-4">
-                    <div class="portfolio-item">
-                        <img src="TUP-Assist.png" alt="Project 3" class="img-fluid">
-                        <div class="portfolio-overlay">
-                            <h3>TUP-Assist</h3>
-                            <p>Web App for irregular student to manage their subject.</p>
-                            <a href="https://github.com/CyrineOsorio/tup-assist" class="btn btn-primary" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                </div>
+            
+            <!-- Category Labels -->
+            <div class="portfolio-category-buttons">
+                <span class="category-btn active" id="website-btn">Website</span>
+                <span class="category-btn" id="app-btn">Application</span>
+                <span class="category-btn" id="graphics-btn">Graphics</span>
             </div>
-            <div class="row">
-                <div class="see-more-container">
+            
+            <!-- Portfolio Carousel -->
+            <div id="portfolio-container">
+                <!-- Website Section -->
+                <div class="portfolio-content website-content active">
+                    <div class="row">
+                        <!-- Project 1 -->
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="VokdaVirtual.png" alt="Project 1" class="img-fluid">
+                                <div class="portfolio-overlay">
+                                    <h3>VokdaVirtual</h3>
+                                    <p>I developed this website for a VA company.</p>
+                                    <a href="https://www.vodkavirtuals.com/" class="btn btn-primary" target="_blank">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="see-more-btn">See More</button>
+                </div>
+                
+                <!-- Application Section -->
+                <div class="portfolio-content app-content">
+                    <div class="row">
+                        <!-- Project 1 -->
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="TUP-Assist.png" alt="Project 1" class="img-fluid">
+                                <div class="portfolio-overlay">
+                                    <h3>TUP-Assist</h3>
+                                    <p>Web App for irregular student to manage their subject.</p>
+                                    <a href="https://github.com/CyrineOsorio/tup-assist" class="btn btn-primary" target="_blank">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 2 -->
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="SelCam.png" alt="Project 2" class="img-fluid">
+                                <div class="portfolio-overlay">
+                                    <h3>SelCam</h3>
+                                    <p>Take photos with your camera and save it to your album.</p>
+                                    <a href="https://rejay45portfolio.vercel.app/" class="btn btn-primary" target="_blank">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="see-more-btn">See More</button>
+                </div>
+                
+                <!-- Graphics Section -->
+                <div class="portfolio-content graphics-content">
+                    <div class="row">
+                        <!-- Placeholder Graphics -->
+                        <div class="col-md-4">
+                            <div class="portfolio-item">
+                                <img src="placeholder.png" alt="Graphics Placeholder" class="img-fluid">
+                                <div class="portfolio-overlay">
+                                    <h3>Placeholder</h3>
+                                    <p>Placeholder for graphics projects.</p>
+                                    <a href="#" class="btn btn-primary" target="_blank">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <button class="see-more-btn">See More</button>
                 </div>
             </div>
@@ -539,6 +575,39 @@
             type();
         });
 
+        // Handling category button clicks
+        document.getElementById("website-btn").addEventListener("click", function() {
+            showContent("website");
+        });
+
+        document.getElementById("app-btn").addEventListener("click", function() {
+            showContent("app");
+        });
+
+        document.getElementById("graphics-btn").addEventListener("click", function() {
+            showContent("graphics");
+        });
+
+        // Function to show the relevant portfolio section and update button states
+        function showContent(contentType) {
+            // Hide all content sections
+            document.querySelectorAll(".portfolio-content").forEach(function(content) {
+                content.classList.remove("active");
+            });
+            
+            // Show the clicked content section
+            document.querySelector("." + contentType + "-content").classList.add("active");
+            
+            // Update button states
+            document.querySelectorAll(".category-btn").forEach(function(button) {
+                button.classList.remove("active");
+                if (button.id === contentType + "-btn") {
+                    button.classList.add("active");
+                }
+            });
+        }
+
+    
     </script>
 
     <script src="script.js"></script>

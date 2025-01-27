@@ -278,6 +278,7 @@ h1, h2, h3, h4, h5 {
 
 /* PORTFOLIO */
 
+
 /* Portfolio Section Styling */
 #portfolio {
     text-align: center;
@@ -285,50 +286,60 @@ h1, h2, h3, h4, h5 {
     background-color: #f9f9f9;
 }
 
-#portfolio {
-    display: flex;
-    text-align: center;
-}
-
 #portfolio h2 {
     font-size: 50px;
     font-weight: bold;
 }
 
-
-#portfolio-container {
-    padding: 20px;
+/* Category Buttons */
+.portfolio-category-buttons {
+    margin-bottom: 30px;
 }
 
+.category-btn {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 15px;
+    cursor: pointer;
+    display: inline-block;
+    transition: font-weight 0.3s ease;
+}
+
+.category-btn.active {
+    font-weight: bold;
+}
+
+/* Portfolio Content */
+.portfolio-content {
+    display: none;
+}
+
+.portfolio-content.active {
+    display: block;
+}
+
+/* Portfolio Item Styling */
 .portfolio-item {
     position: relative;
     overflow: hidden;
-
     border: none;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-
     margin-bottom: 30px;
-    display: flex; /* Makes the container a flexbox */
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the content vertically */
-    overflow: hidden; /* Prevents image overflow */
-    height: 250px; /* Matches the image height */
 }
 
 .portfolio-item img {
     width: 100%;
-    height: 250px; /* Set a constant height */
-    object-fit: cover; /* Ensures the image scales proportionally without distortion */
-    object-position: top; /* Aligns the image to the top */
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
     transition: transform 0.3s ease;
 }
 
 .portfolio-item:hover img {
     transform: scale(1.1);
 }
-
 
 .portfolio-overlay {
     position: absolute;
@@ -378,12 +389,7 @@ h1, h2, h3, h4, h5 {
     background-color: #f39c12;
 }
 
-/* Styling for the See More Button */
-.see-more-container {
-    text-align: center; /* Centers the button */
-    margin-top: 20px; /* Adds space above the button */
-}
-
+/* See More Button */
 .see-more-btn {
     padding: 10px 20px;
     background-color: #231f20;
@@ -399,8 +405,9 @@ h1, h2, h3, h4, h5 {
 .see-more-btn:hover {
     background-color: #f39c12;
     color: #fff;
-    transform: scale(1.05); /* Slightly enlarges the button */
+    transform: scale(1.05);
 }
+
 
 
 
