@@ -400,6 +400,7 @@ h1, h2, h3, h4, h5 {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-top: 50px;
 }
 
 .see-more-btn:hover {
@@ -407,8 +408,6 @@ h1, h2, h3, h4, h5 {
     color: #fff;
     transform: scale(1.05);
 }
-
-
 
 
 
