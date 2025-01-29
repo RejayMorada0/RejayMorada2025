@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement Fund Calculator (Philippines)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Oswald', sans-serif;
+            background: linear-gradient(to right, #232526, #414345);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            font-weight: 600;
+            color: #ffcc00;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: 400;
+            text-align: left;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background: #2e2e2e;
+            color: #fff;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffcc00;
+            color: #333;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #ffaa00;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+        .info {
+            font-size: 14px;
+            color: #bbb;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Retirement Fund Calculator (Philippines)</h2>
+        
+        <label>Present Age:</label>
+        <input type="number" id="presentAge" placeholder="Enter your age">
+
+        <label>Desired Retirement Age:</label>
+        <input type="number" id="retirementAge" placeholder="Enter retirement age">
+        <div class="info">How old do you want to be when you retire?</div>
+
+        <label>Current Monthly Income (PHP):</label>
+        <input type="number" id="monthlyIncome" placeholder="Enter your monthly income">
+        <div class="info">Your current income will be adjusted for inflation.</div>
+
+        <label>Expected Inflation Rate (% per year):</label>
+        <input type="number" id="inflationRate" value="4" placeholder="Enter inflation rate">
+        <div class="info">Standard is 4%, but you can adjust based on market conditions.</div>
+
+        <button onclick="calculateRetirement()">Calculate</button>
+        
+        <div class="result" id="output"></div>
+    </div>
+
+    <script>
+        function calculateRetirement() {
+            let presentAge = parseInt(document.getElementById("presentAge").value);
+            let retirementAge = parseInt(document.getElementById("retirementAge").value);
+            let monthlyIncome = parseFloat(document.getElementById("monthlyIncome").value);
+            let inflationRate = parseFloat(document.getElementById("inflationRate").value) / 100;
+
+            if (isNaN(presentAge) || isNaN(retirementAge) || isNaN(monthlyIncome) || isNaN(inflationRate)) {
+                document.getElementById("output").innerHTML = "Please fill in all fields.";
+                return;
+            }
+
+            let yearsUntilRetirement = retirementAge - presentAge;
+            let retirementDuration = 20; // Assume retirement lasts 20 years
+
+            // Adjust annual income for inflation
+            let annualIncome = monthlyIncome * 12;
+            let futureAnnualIncome = annualIncome * Math.pow((1 + inflationRate), yearsUntilRetirement);
+            
+            // Total retirement fund needed (20 years worth of income)
+            let totalRetirementFund = futureAnnualIncome * retirementDuration;
+
+            document.getElementById("output").innerHTML = `
+                <p>Years until Retirement: <strong>${yearsUntilRetirement} years</strong></p>
+                <p>Future Annual Income Needed: <strong>PHP ${futureAnnualIncome.toLocaleString()}</strong></p>
+                <p>Retirement Duration: <strong>${retirementDuration} years</strong></p>
+                <p>Total Retirement Fund Needed: <strong>PHP ${totalRetirementFund.toLocaleString()}</strong></p>
+                <br>
+                <p>You need approximately <strong>PHP ${totalRetirementFund.toLocaleString()}</strong> 
+                to retire comfortably at age <strong>${retirementAge}</strong> (in <strong>${yearsUntilRetirement} years</strong>).</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>

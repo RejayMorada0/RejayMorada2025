@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav-link:hover {
-    color: #f39c12 !important;
+    color: #0D6EFD !important;
 }
 
 .hero-section {
@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav-link:hover {
-    color: #f39c12 !important;
+    color: #0D6EFD !important;
 }
 
 .hero-section {
@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .social-icon:hover {
-    color: #f39c12; /* Color change on hover */
+    color: #0D6EFD; /* Color change on hover */
 }
 
 #bio {
@@ -281,8 +281,8 @@ h1, h2, h3, h4, h5 {
 }
 
 #tools button:hover {
-    background-color: #f39c12;
-    border-color: #f39c12;
+    background-color: #0D6EFD;
+    border-color: #0D6EFD;
 }
 
 #tools button:hover i {
@@ -401,7 +401,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .portfolio-overlay .btn:hover {
-    background-color: #f39c12;
+    background-color: #0D6EFD;
+    border: #0D6EFD solid 1px;
 }
 
 /* See More Button */
@@ -419,7 +420,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .see-more-btn:hover {
-    background-color: #f39c12;
+    background-color: #0D6EFD;
     color: #fff;
     transform: scale(1.05);
 }
@@ -490,7 +491,7 @@ h1, h2, h3, h4, h5 {
   }
   
   .contact-item i:hover {
-    background-color: #f39c12;
+    background-color: #0D6EFD;
     color: #fff;
     transform: scale(1.1);
   }
@@ -540,7 +541,7 @@ h1, h2, h3, h4, h5 {
     transition: background 0.3s ease;
   }
   .contact-form button:hover {
-    background-color: #f39c12;
+    background-color: #0D6EFD;
   }
 
 
