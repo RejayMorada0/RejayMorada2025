@@ -272,8 +272,23 @@ h1, h2, h3, h4, h5 {
     font-weight: bold;
 }
 
+.fas {
+    color: #231f20;
+}
 
-  
+#tools button {
+    border-color: #231f20;
+}
+
+#tools button:hover {
+    background-color: #f39c12;
+    border-color: #f39c12;
+}
+
+#tools button:hover i {
+    color: #fff; /* Changes the icon color to white on hover */
+}
+
 
 
 /* PORTFOLIO */
@@ -559,8 +574,6 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     padding: 20px;
 }
-
-
 
 
 
