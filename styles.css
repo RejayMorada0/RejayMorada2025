@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .hero-section {
-    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('rejay-img.jpeg');
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('assets/rejay-img.jpeg');
     background-size: cover;
     background-position: center;
     color: #231f20;
@@ -298,7 +298,6 @@ h1, h2, h3, h4, h5 {
 #portfolio {
     text-align: center;
     padding: 60px 20px;
-    background-color: #f9f9f9;
 }
 
 #portfolio h2 {
