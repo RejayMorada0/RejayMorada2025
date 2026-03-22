@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafe & Bakery Brand</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia Pro', serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #111;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+      height: 80px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+    }
+
+    .back-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #111;
+      font-size: 14px;
+    }
+
+    .arrow {
+      width: 12px;
+      height: 12px;
+      border-left: 2px solid #111;
+      border-bottom: 2px solid #111;
+      transform: rotate(45deg);
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 80px 20px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 80px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    /* Full image */
+    .full-image {
+      width: 100%;
+      max-width: 1000px;
+      margin-bottom: 30px;
+    }
+
+    .full-image img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    /* IG vertical layout */
+    .ig-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .ig-item {
+      width: 100%;
+      height: auto; /* same size for all */
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+    }
+
+    .ig-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="index.html" class="back-btn">
+      <div class="arrow"></div>
+      Back to Home
+    </a>
+  </div>
+
+  <section id="gallery">
+    <h2>Cafe & Bakery Brand</h2>
+
+    <!-- Full width image placeholder -->
+    <div class="full-image">
+      <img src="assets/Graphic 1.png" alt="Full Width Placeholder">
+    </div>
+
+    <!-- IG Image Feed -->
+    <div class="ig-grid">
+      <div class="ig-item"><img src="assets/G1.1.png" alt="Post 1"></div>
+      <div class="ig-item"><img src="assets/G1.2.png" alt="Post 2"></div>
+      <div class="ig-item"><img src="assets/G1.3.png" alt="Post 3"></div>
+      <div class="ig-item"><img src="assets/G1.4.png" alt="Post 4"></div>
+      <div class="ig-item"><img src="assets/G1.5.png" alt="Post 5"></div>
+      <div class="ig-item"><img src="assets/G1.6.png" alt="Post 6"></div>
+    </div>
+
+  </section>
+
+</body>
+</html>

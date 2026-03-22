@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refine Media</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia Pro', serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #111;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+      height: 80px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+    }
+
+    .back-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #111;
+      font-size: 14px;
+    }
+
+    .arrow {
+      width: 12px;
+      height: 12px;
+      border-left: 2px solid #111;
+      border-bottom: 2px solid #111;
+      transform: rotate(45deg);
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 100px 20px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    /* Computer mockup */
+    .mockup {
+      width: 90%;
+      max-width: 1000px;
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .screen {
+      height: 500px;
+      overflow-y: auto;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid #ddd;
+    }
+
+    .screen img {
+      width: 100%;
+      display: block;
+    }
+
+    /* Sections colors */
+    #home { background: #ffffff; }
+    #services { background: #fafafa; }
+    #about { background: #f5f5f5; }
+
+    /* Scrollbar styling */
+    .screen::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .screen::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="index.html" class="back-btn">
+      <div class="arrow"></div>
+      Back to Home
+    </a>
+  </div>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Home</h2>
+    <div class="mockup">
+      <div class="screen">
+        <img src="assets/Homepage - CSS.png" alt="Home">
+      </div>
+    </div>
+  </section>
+
+  <!-- Support Section -->
+  <section id="services">
+    <h2>Support Page</h2>
+    <div class="mockup">
+      <div class="screen">
+        <img src="assets/Support Page - CSS.png"  alt="Support">
+      </div>
+    </div>
+  </section>
+
+  <!-- Training Section -->
+  <section id="about">
+    <h2>Training Page</h2>
+    <div class="mockup">
+      <div class="screen">
+        <img src="assets/Training Page - CSS.png" alt="Training">
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
