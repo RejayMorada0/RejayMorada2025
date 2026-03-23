@@ -286,9 +286,20 @@ h1, h2, h3, h4, h5 {
 }
 
 #tools button:hover i {
+    
     color: #fff; /* Changes the icon color to white on hover */
 }
 
+.tools-image-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tools-image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
 
 /* PORTFOLIO */
